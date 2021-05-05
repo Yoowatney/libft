@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bzero.c                                            :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/05 18:30:26 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/05 18:44:50 by yoyoo            ###   ########.fr       */
+/*   Created: 2021/05/05 18:45:34 by yoyoo             #+#    #+#             */
+/*   Updated: 2021/05/05 18:49:13 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
-void	ft_bzero(void *ptr, size_t n)
-{
-	unsigned long i;
+# include <stdlib.h>
+# include <unistd.h>
 
-	i = 0;
-	while (i < n)
-	{
-		*(char *)ptr = 0;
-		i++;
-		ptr++;
-	}
-}
+void	*ft_memchr(const void *s, int c, size_t n);
+void	ft_bzero(void *ptr, size_t size);
 
-/*int main(void)*/
-/*{*/
-	/*ft_bzero("123", 3);*/
-	/*return (0);*/
-/*}*/
+#endif

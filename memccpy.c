@@ -1,6 +1,6 @@
-#include <stdio.h>
-#include <string.h>
-
+/*#include <stdio.h>*/
+/*#include <string.h>*/
+#include "libft.h"
 void	*ft_memccpy(void *dest, const void *source, int c, size_t n)
 {
 	unsigned long i;
@@ -16,19 +16,19 @@ void	*ft_memccpy(void *dest, const void *source, int c, size_t n)
 	return (dest);
 }
 
-int main()
-{
-	int dest[10];
-	int source[7] = {1,2,3,4,5,6,7}; 
-	memccpy(dest, source, 7, sizeof(source));
-	for (int i = 0; i < 10; i++)
-	{
-		printf("%d ", dest[i]);
-	}
-	printf("\n -- start --\n");
-	ft_memccpy(dest, source, 7, sizeof(source));
-	for (int i = 0; i < 10; i++)
-	{
-		printf("%d ", dest[i]);
-	}
-}
+/*int main()*/
+/*{*/
+	/*int dest[10];*/
+	/*int source[7] = {1,2,3,4,5,6,7}; */
+	/*memccpy(dest, source, 7, sizeof(source));*/
+	/*for (int i = 0; i < 10; i++)*/
+	/*{*/
+		/*printf("%d ", dest[i]);*/
+	/*}*/
+	/*printf("\n -- start --\n");*/
+	/*ft_memccpy(dest, source, 7, sizeof(source));*/
+	/*for (int i = 0; i < 10; i++)*/
+	/*{*/
+		/*printf("%d ", dest[i]);*/
+	/*}*/
+/*}*/

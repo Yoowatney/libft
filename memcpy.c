@@ -1,5 +1,6 @@
-#include <stdio.h>
-#include <string.h>
+/*#include <stdio.h>*/
+/*#include <string.h>*/
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *source, size_t num)
 {
@@ -17,22 +18,20 @@ void	*ft_memcpy(void *dest, const void *source, size_t num)
 	}
 	return (dest);
 }
-#include <stdio.h>
-#include <string.h>
 
-int main()
-{
-	int ori[25];
-	for (int i = 0; i < 20; i++)
-	{
-		ori[i] = i + 1;
-	}
-	ft_memcpy(ori + 4, ori + 2, sizeof(int) * 17);
-	for (int i = 0; i < 20; i++)
-	{
-		printf("%d ", ori[i]);
-	}
-}
+/*int main()*/
+/*{*/
+	/*int ori[25];*/
+	/*for (int i = 0; i < 20; i++)*/
+	/*{*/
+		/*ori[i] = i + 1;*/
+	/*}*/
+	/*ft_memcpy(ori + 4, ori + 2, sizeof(int) * 17);*/
+	/*for (int i = 0; i < 20; i++)*/
+	/*{*/
+		/*printf("%d ", ori[i]);*/
+	/*}*/
+/*}*/
 
 /** int main() */
 /** { */

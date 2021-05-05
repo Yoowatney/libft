@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bzero.c                                            :+:      :+:    :+:   */
+/*   strlen.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/05 18:30:26 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/05 18:44:50 by yoyoo            ###   ########.fr       */
+/*   Created: 2021/05/05 18:53:59 by yoyoo             #+#    #+#             */
+/*   Updated: 2021/05/05 18:54:00 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*#include <stdio.h>*/
+/*#include <string.h>*/
 #include "libft.h"
 
-void	ft_bzero(void *ptr, size_t n)
+unsigned long ft_strlen(const char *str)
 {
 	unsigned long i;
 
 	i = 0;
-	while (i < n)
+	while (str[i] != '\0')
 	{
-		*(char *)ptr = 0;
-		i++;
-		ptr++;
-	}
+		 i++;
+	} 
+	return (i);
 }
 
-/*int main(void)*/
+/*int main()*/
 /*{*/
-	/*ft_bzero("123", 3);*/
-	/*return (0);*/
+	/*char str[] = "123456789";*/
+
+	/*printf("%ld\n", strlen(str));*/
+	/*printf("%ld ", ft_strlen(str));*/
 /*}*/
