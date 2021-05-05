@@ -1,8 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
-void	*memeset(void *ptr, int value, size_t num)
+void	*ft_memset(void *ptr, int value, size_t num)
 {
 	unsigned long i;
 	
@@ -15,16 +14,38 @@ void	*memeset(void *ptr, int value, size_t num)
 	}
 	return (ptr);
 }
+#include <stdio.h>
+#include <string.h>
 
 int main()
 {
-	int arr[10];
-	memeset(arr, 1, sizeof(arr));
-	for (int i = 0; i < 10; i++)
+	int ori[25];
+	for (int i = 0; i < 20; i++)
 	{
-		printf("%c ", arr[i]);
+		ori[i] = i + 1;
 	}
-	memset(arr, 1, sizeof(arr));
+	ft_memset(ori + 4, ori + 2, sizeof(int) * 17);
+	for (int i = 0; i < 20; i++)
+	{
+		printf("%d ", ori[i]);
+	}
+}
+
+
+/** int main() */
+/** { */
+/**     char arr[10]; */
+/**     ft_memset(arr, 'a', sizeof(arr)); */
+/**     for (int i = 0; i < 10; i++) */
+/**     { */
+/**         printf("%c ", arr[i]); */
+/**     } */
+/**     printf("\n"); */
+/**     memset(arr, 'a', sizeof(arr)); */
+/**     for (int i = 0; i < 10; i++) */
+/**     { */
+/**         printf("%c ", arr[i]); */
+/**     } */
 //	for (int i = 0; i < 10; i++)
 //	{
 //		printf("%c ", arr[i]);

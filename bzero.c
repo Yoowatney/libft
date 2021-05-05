@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-void	bzero(void *ptr, size_t size)
+void	ft_bzero(void *ptr, size_t size)
 {
-	unsigned long int i;
+	unsigned long i;
 
 	i = 0;
 	while (i < size)
@@ -17,7 +17,7 @@ int main()
 {
 	long arr[10];
 
-	bzero(arr, sizeof(arr));
+	ft_bzero(arr, sizeof(arr));
 	for (unsigned long i = 0; i < sizeof(arr) / sizeof(long); i++)
 	{
 		printf("%ld ", arr[i]);
