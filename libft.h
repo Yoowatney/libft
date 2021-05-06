@@ -6,17 +6,27 @@
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 18:45:34 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/05 18:49:13 by yoyoo            ###   ########.fr       */
+/*   Updated: 2021/05/06 10:13:32 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
-# include <unistd.h>
+#include <stddef.h>
 
-void	*ft_memchr(const void *s, int c, size_t n);
 void	ft_bzero(void *ptr, size_t size);
+void	*ft_memccpy(void *dest, const void *source, int c, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
+int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num);
+void	*ft_memcpy(void *dest, const void *source, size_t num);
+void	*ft_memmove(void *dest, const void *src, size_t num);
+void	*ft_memset(void *ptr, int value, size_t num);
+
+
+size_t ft_strlcpy(char *dst, const char *src, size_t num);
+
+
+unsigned long ft_strlen(const char *str);
 
 #endif
