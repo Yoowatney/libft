@@ -1,21 +1,26 @@
-/*#include <stdio.h>*/
-/*#include <string.h>*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/06 13:44:38 by yoyoo             #+#    #+#             */
+/*   Updated: 2021/05/06 15:48:02 by yoyoo            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
 int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 {
 	size_t i;
-	
+
 	i = 0;
 	while (i < num)
 	{
-		if (*(char *)ptr1 != *(char *)ptr2)
-			return (*(char *)ptr1 - *(char *)ptr2);
-		/*if (*(char *)ptr1 < *(char *)ptr2)*/
-			/*return (-1);*/
-		/*else if (*(char *)ptr1 > *(char *)ptr2)*/
-			/*return (1);*/
+		if (*(unsigned char *)ptr1 != *(unsigned char *)ptr2)
+			return (*(unsigned char *)ptr1 - *(unsigned char *)ptr2);
 		else
 		{
 			i++;
@@ -25,10 +30,3 @@ int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 	}
 	return (0);
 }
-/*int main(void)*/
-/*{*/
-	/*char s[] = "";*/
-	/*printf("%d\n", memcmp(s, s, 3));*/
-	/*printf("%d", ft_memcmp(s, s, 3));*/
-	/*return (0);*/
-/*}*/
