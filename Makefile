@@ -6,7 +6,7 @@
 #    By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/05 18:32:37 by yoyoo             #+#    #+#              #
-#    Updated: 2021/05/06 10:05:36 by yoyoo            ###   ########.fr        #
+#    Updated: 2021/05/06 16:32:14 by yoyoo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ AR = ar rc
 RM = rm -f
 
 # BSRCS = $(wildcard *lst*.c)
-SRCS = ft_bzero.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_strchr.c ft_strlen.c
+SRCS = ft_bzero.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_strchr.c ft_strlen.c ft_strlcpy.c
 # SRCS = $(filter-out $(BSRCS), $(wildcard *.c))
 OBJS = $(SRCS:.c=.o)
 # BOBJS = $(BSRCS:.c=.o)

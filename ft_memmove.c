@@ -1,5 +1,15 @@
-/*#include <stdio.h>*/
-/*#include <string.h>*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/06 16:13:53 by yoyoo             #+#    #+#             */
+/*   Updated: 2021/05/06 16:14:03 by yoyoo            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t num)
@@ -10,36 +20,14 @@ void	*ft_memmove(void *dest, const void *src, size_t num)
 	i = 0;
 	while (i < num)
 	{
-		temp[i] = *(unsigned char *)src;
-		src++;
+		temp[i] = *((unsigned char *)src + i);
 		i++;
 	}
 	i = 0;
 	while (i < num)
 	{
-		*(unsigned char *)dest = temp[i];
-		dest++;
+		*((unsigned char *)dest + i) = temp[i];
 		i++;
 	}
 	return (dest);
 }
-
-/*int main()*/
-/*{*/
-	/*[>int arr[10];<]*/
-	/*int src1[100] = {0, 1, 2, 3, 4, 5, 6, 7, 8};*/
-	/*int src2[100] = {0, 1, 2, 3, 4, 5, 6, 7, 8};*/
-
-	/*memmove(src1 + 2, src1, sizeof(int) * 98);*/
-	/*[>* ft_memmove(src1 + 4, src1 + 2, sizeof(int) * 17); <]*/
-	/*for (int i = 0; i < 20; i++)*/
-	/*{*/
-		/*printf("%d ", src1[i]);*/
-	/*}*/
-	/*printf("\n");*/
-	/*memmove(src2 + 4, src2 + 2, sizeof(int) * 17);*/
-	/*for (int i = 0; i < 20; i++)*/
-	/*{*/
-		/*printf("%d ", src2[i]);*/
-	/*}*/
-/*}*/
