@@ -6,7 +6,7 @@
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 16:51:56 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/06 20:14:06 by yoyoo            ###   ########.fr       */
+/*   Updated: 2021/05/09 22:44:17 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,6 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t i;
-	/*size_t i;*/
-
-	/*unsigned char *ret;*/
-
-	/*ret = (unsigned char *)s;*/
-	/*while (n--)*/
-	/*{*/
-	/*if (*ret == (unsigned char)c)*/
-	/*return (ret);*/
-	/*ret++;*/
-	/*}*/
-	/*return (0);*/
 
 	i = 0;
 	while (*(unsigned char *)s != (unsigned char)c && i < n)
