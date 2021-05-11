@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/11 16:44:51 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/11 16:44:53 by yoyoo            ###   ########.fr       */
+/*   Created: 2021/05/11 17:50:58 by yoyoo             #+#    #+#             */
+/*   Updated: 2021/05/11 17:51:06 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,11 @@ void	rec(int nb, int fd)
 	write(fd, &c, 1);
 }
 
-/** void	ft_putnbr_fd(int n, int fd) */
-/** { */
-/**      */
-/** } */
 void	ft_putnbr_fd(int nb, int fd)
 {
 	if (nb == 0)
 		write(fd, "0", 1);
-	
+
 	else if (nb == -2147483648)
 	{
 		rec(nb / 10, fd);
@@ -45,9 +41,3 @@ void	ft_putnbr_fd(int nb, int fd)
 	else
 		rec(nb, fd);
 }
-/** int	main(void) */
-/** { */
-/**     int nb = -2147483648; */
-/**     ft_putnbr(nb); */
-/**     return (0); */
-/** } */

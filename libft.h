@@ -6,7 +6,7 @@
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 18:45:34 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/11 16:45:22 by yoyoo            ###   ########.fr       */
+/*   Updated: 2021/05/11 21:05:05 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,11 @@
 void	ft_bzero(void *ptr, size_t size);
 void	*ft_calloc(size_t nmemb, size_t size);
 
+int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
-int		ft_isalnum(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
 
 void	*ft_memccpy(void *dest, const void *source, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
@@ -40,14 +38,19 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int nb, int fd);
 
-
-size_t ft_strlcpy(char *dest, char *src, unsigned long size);
-size_t	ft_strlcat(char *dst, const char *src, size_t size);
-size_t ft_strlen(const char *str);
 char	*ft_strchr(char *str, int c);
-int		ft_strncmp(const char *ptr1, const char *ptr2, size_t num);
-char	*ft_strrchr(char *str, int c);
 
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcpy(char *dest, char *src, unsigned long size);
+size_t	ft_strlen(const char *str);
+int		ft_strncmp(const char *ptr1, const char *ptr2, size_t num);
+char	*ft_strnstr(const char *str, const char *to_find);
+
+char	*ft_strrchr(char *str, int c);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+int		ft_toupper(int c);
+int		ft_tolower(int c);
 
 
 

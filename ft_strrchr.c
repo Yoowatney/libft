@@ -1,5 +1,15 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/11 17:54:12 by yoyoo             #+#    #+#             */
+/*   Updated: 2021/05/11 17:59:25 by yoyoo            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strrchr(char *str, int c)
@@ -20,12 +30,3 @@ char	*ft_strrchr(char *str, int c)
 	}
 	return (NULL);
 }
-
-
-/** int main() */
-/** { */
-/**     char str[10] = "1"; */
-/**     printf("str : %p\n", str); */
-/**     printf("%p\n", strrchr(str, '\0')); */
-/**     printf("%p\n", ft_strrchr(str, '\0')); */
-/** } */
