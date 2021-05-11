@@ -5,49 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/11 16:44:51 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/11 16:44:53 by yoyoo            ###   ########.fr       */
+/*   Created: 2021/05/11 16:24:08 by yoyoo             #+#    #+#             */
+/*   Updated: 2021/05/11 16:24:10 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "libft.h"
 
-void	rec(int nb, int fd)
-{	char c;
-
-	if (nb < 0)
-	{
-		nb *= -1;
-		write(fd, "-", 1);
-	}
-	c = '0' + nb % 10;
-
-	if (nb == 0)
-		return ;
-	rec(nb / 10, fd);
-	write(fd, &c, 1);
-}
-
-/** void	ft_putnbr_fd(int n, int fd) */
-/** { */
-/**      */
-/** } */
-void	ft_putnbr_fd(int nb, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (nb == 0)
-		write(fd, "0", 1);
+	size_t len;
 	
-	else if (nb == -2147483648)
-	{
-		rec(nb / 10, fd);
-		write(fd, "8", 1);
-	}
-	else
-		rec(nb, fd);
+	len = ft_strlen(s);
+	write(fd, s, len);
 }
-/** int	main(void) */
-/** { */
-/**     int nb = -2147483648; */
-/**     ft_putnbr(nb); */
-/**     return (0); */
-/** } */

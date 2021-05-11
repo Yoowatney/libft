@@ -6,7 +6,7 @@
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 18:45:34 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/11 15:16:57 by yoyoo            ###   ########.fr       */
+/*   Updated: 2021/05/11 16:45:22 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ void	*ft_memset(void *ptr, int value, size_t num);
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int nb, int fd);
 
 
 size_t ft_strlcpy(char *dest, char *src, unsigned long size);
