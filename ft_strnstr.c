@@ -6,68 +6,62 @@
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 20:45:07 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/12 17:25:03 by yoyoo            ###   ########.fr       */
+/*   Updated: 2021/05/12 20:42:25 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*char	*put_null(const char *str, size_t len)*/
-/*{*/
-	/*char	ret[400];*/
-	/*size_t	i;*/
-
-	/*i = 0;*/
-	/*while (i < len - 2)*/
-	/*{*/
-		/*ret[i] = *str;*/
-		/*str++;*/
-		/*i++;*/
-	/*}*/
-	/*ret[len - 1] = '\0';*/
-	/*return (ret);*/
-/*}*/
-
-char	*ft_strnstr(const char *str, const char *to_find, size_t len)
+char* ft_strnstr(const char* str, const char* to_find, size_t len)
 {
-	size_t	to_find_len;
 	size_t	i;
-	int		sign;
-	/*char	*haystack;*/
+	size_t	j;
 
-	/*haystack = put_null(str, len);*/
-	to_find_len = ft_strlen(to_find);
-	if (to_find_len > len)
-		return (0);
+	i = 0;
 	if (*to_find == '\0')
-		return ((char *)str);
-	while (*str && len--)
+		return ((char *) str);
+	while (str[i] != '\0' && i < len)
 	{
-		i = 0;
-		sign = 1;
-		while (i < len && str[i] != str[len - 1])
+		j = 0;
+		while (i + j < len)
 		{
-			if (*(str + i) != *(to_find + i))
-			{
-				sign = 0;
+			if (str[i + j] != to_find[j])
 				break ;
-			}
-			i++;
+			j++;
+			if (to_find[j] == '\0')
+				return ((char *)&str[i]);
 		}
-		if (sign == 1)
-			return ((char *)str);
-		str++;
+		i++;
 	}
 	return (0);
 }
-/*#include <stdio.h>*/
-/*#include <string.h>*/
 
-/*int main(void)*/
+/*char	*ft_strnstr(const char *str, const char *to_find, size_t len)*/
 /*{*/
-	/*printf("%s\n", strnstr("124566789765523", "23", 30));*/
-	/*printf("%s\n", ft_strnstr("123", "23", 2));*/
-	
+	/*size_t	to_find_len;*/
+	/*size_t	i;*/
+	/*int		sign;*/
+
+	/*to_find_len = ft_strlen(to_find);*/
+	/*if (*to_find == '\0')*/
+		/*return ((char *)str);*/
+	/*while (*str && len--)*/
+	/*{*/
+		/*i = 0;*/
+		/*sign = 1;*/
+		/*while (i < to_find_len )*/
+		/*{*/
+			/*if (*(str + i) != *(to_find + i))*/
+			/*{*/
+				/*sign = 0;*/
+				/*break ;*/
+			/*}*/
+			/*i++;*/
+		/*}*/
+		/*if (sign == 1)*/
+			/*return ((char *)str);*/
+		/*str++;*/
+	/*}*/
 	/*return (0);*/
 /*}*/
 	/*size_t	find_len;*/

@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/12 13:02:25 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/12 22:33:29 by yoyoo            ###   ########.fr       */
+/*   Created: 2021/05/12 20:49:20 by yoyoo             #+#    #+#             */
+/*   Updated: 2021/05/12 20:54:43 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strdup(const char *s1)
 {
-	char			*ret;
-	unsigned int	i;
-
+	char	*ret;
+	size_t	i;
+	
 	i = 0;
-	if (!s)
-		return (0);
-	ret = (char *)malloc(sizeof(char) * (len + 1));
-	if (!ret) /*|| !s*/
-		return (0);
-	if (start >= ft_strlen(s))
+	ret = (char *)malloc(ft_strlen(s1) + 1);
+	if (!ret)
+		return (NULL);
+	while (i < ft_strlen(s1))
 	{
-		ret[i] = '\0';
-		return (ret);
-	}
-	while (i < len)
-	{
-		ret[i] = s[start];
+		ret[i] = *(s1 + i);
 		i++;
-		start++;
 	}
 	ret[i] = '\0';
 	return (ret);
