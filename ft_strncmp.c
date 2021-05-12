@@ -6,7 +6,7 @@
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 22:37:49 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/09 22:37:58 by yoyoo            ###   ########.fr       */
+/*   Updated: 2021/05/12 13:43:21 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int	ft_strncmp(const char *ptr1, const char *ptr2, size_t num)
 	{
 		if (*ptr1 != *ptr2)
 			return (*(unsigned char *)ptr1 - *(unsigned char *)ptr2);
-
+		else if (*ptr1 == '\0' || *ptr2 == '\0')
+			break ;
 		else
 		{
 			i++;
@@ -31,12 +32,3 @@ int	ft_strncmp(const char *ptr1, const char *ptr2, size_t num)
 	}
 	return (0);
 }
-
-
-/** int main() */
-/** { */
-/**     printf("%d\n", strncmp("\0", "\200", 6)); */
-/**     printf("%d\n", ft_strncmp("\0", "\200", 6)); */
-/**     char s = '\200'; */
-/**     printf("%d", s); */
-/** } */

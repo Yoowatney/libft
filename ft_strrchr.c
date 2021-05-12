@@ -6,7 +6,7 @@
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 17:54:12 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/11 17:59:25 by yoyoo            ###   ########.fr       */
+/*   Updated: 2021/05/12 14:06:18 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(char *str, int c)
 	i = 0;
 	while (1)
 	{
-		if (*(str + str_len) == c)
+		if (*(str + str_len) == (char)c)
 			return (str + str_len);
 		if (i == ft_strlen(str))
 			break ;

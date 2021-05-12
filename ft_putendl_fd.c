@@ -6,7 +6,7 @@
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 16:32:02 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/11 16:32:11 by yoyoo            ###   ########.fr       */
+/*   Updated: 2021/05/12 13:08:51 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	size_t len;
-	
-	len = ft_strlen(s);
-	write(fd, s, len);
+	if (fd < 0 || !s)
+		return ;
+	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }
