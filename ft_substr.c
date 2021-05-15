@@ -6,7 +6,7 @@
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 13:02:25 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/12 22:33:29 by yoyoo            ###   ########.fr       */
+/*   Updated: 2021/05/13 19:45:28 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (0);
-	ret = (char *)malloc(sizeof(char) * (len + 1));
-	if (!ret) /*|| !s*/
+	if (start > ft_strlen(s))
+		return ((char *)ft_calloc(sizeof(char), 1));
+	if (ft_strlen(s) - start < len)
+		ret = (char *)malloc(sizeof(char) * (ft_strlen(s) - start + 1));
+	else
+		ret = (char *)malloc(sizeof(char) * (len + 1));
+	if (!ret)
 		return (0);
-	if (start >= ft_strlen(s))
-	{
-		ret[i] = '\0';
-		return (ret);
-	}
-	while (i < len)
+	while (i < len && s[start] != '\0')
 	{
 		ret[i] = s[start];
 		i++;

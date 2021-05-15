@@ -6,13 +6,13 @@
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 17:50:58 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/11 17:51:06 by yoyoo            ###   ########.fr       */
+/*   Updated: 2021/05/15 19:32:23 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	rec(int nb, int fd)
+static	void	rec(int nb, int fd)
 {	char c;
 
 	if (nb < 0)
