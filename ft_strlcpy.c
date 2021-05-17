@@ -6,13 +6,13 @@
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 16:28:31 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/12 13:48:06 by yoyoo            ###   ########.fr       */
+/*   Updated: 2021/05/17 22:35:19 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, unsigned long size)
+size_t	ft_strlcpy(char *dest, char const *src, unsigned long size)
 {
 	size_t i;
 
