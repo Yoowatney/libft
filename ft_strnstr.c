@@ -6,20 +6,20 @@
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 20:45:07 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/14 22:31:25 by yoyoo            ###   ########.fr       */
+/*   Updated: 2021/05/17 16:30:21 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char* ft_strnstr(const char* str, const char* to_find, size_t len)
+char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
 	i = 0;
 	if (*to_find == '\0')
-		return ((char *) str);
+		return ((char *)str);
 	while (str[i] != '\0' && i < len)
 	{
 		j = 0;

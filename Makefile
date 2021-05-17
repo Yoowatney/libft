@@ -6,7 +6,7 @@
 #    By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/05 18:32:37 by yoyoo             #+#    #+#              #
-#    Updated: 2021/05/15 19:48:44 by yoyoo            ###   ########.fr        #
+#    Updated: 2021/05/17 18:31:54 by yoyoo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,7 @@ SRCS = ft_atoi.c \
 	   ft_substr.c \
 	   ft_tolower.c \
 	   ft_toupper.c
+
 BSRCS = ft_lstadd_back.c \
 		ft_lstadd_front.c \
 		ft_lstclear.c \
@@ -60,6 +61,7 @@ BSRCS = ft_lstadd_back.c \
 		ft_lstmap.c \
 		ft_lstnew.c \
 		ft_lstsize.c
+
 OBJS = $(SRCS:.c=.o)
 BOBJS = $(BSRCS:.c=.o)
 
@@ -69,7 +71,7 @@ $(NAME): $(OBJS)
 	$(AR) $@ $^
 
 bonus: $(BOBJS) $(OBJS)
-	$(AR) $(NAME) $^
+	 $(AR) $(NAME) $^
 
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -81,5 +83,4 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-
-.PHONY : all clean fclean re
+.PHONY : all clean fclean re bonus

@@ -6,7 +6,7 @@
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 16:09:50 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/15 19:32:02 by yoyoo            ###   ########.fr       */
+/*   Updated: 2021/05/17 16:23:13 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static	void	fill_ret(char *ret, int n, int size)
 	}
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*ret;
 	int		size;

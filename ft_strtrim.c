@@ -6,7 +6,7 @@
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 22:31:51 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/14 22:31:51 by yoyoo            ###   ########.fr       */
+/*   Updated: 2021/05/17 16:43:15 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	{
 		rear--;
 	}
-	char *ret;
 	if (rear == 0)
-	{	
-		ret = (char *)ft_calloc(sizeof(char), 1);
-		return (ret);
+	{
+		return (ft_strdup(""));
 	}
 	return (ft_substr(s1, front, (rear - front + 1)));
 }

@@ -6,7 +6,7 @@
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 20:49:20 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/12 20:54:43 by yoyoo            ###   ########.fr       */
+/*   Updated: 2021/05/17 16:29:05 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strdup(const char *s1)
 {
 	char	*ret;
 	size_t	i;
-	
+
 	i = 0;
 	ret = (char *)malloc(ft_strlen(s1) + 1);
 	if (!ret)
