@@ -6,7 +6,7 @@
 /*   By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 22:31:07 by yoyoo             #+#    #+#             */
-/*   Updated: 2021/05/17 22:47:39 by yoyoo            ###   ########.fr       */
+/*   Updated: 2021/05/21 13:12:39 by yoyoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,22 +62,23 @@ static	int		split_sub(char **ret, char *str, char c, int row)
 	return (1);
 }
 
-int				count_c(char *str, int c)
+int				count_word(char *str, int c)
 {
-	int i;
+	int cnt;
 
-	i = 0;
-	while (*str != c && *str)
+	cnt = 0;
+	while (*str)
 	{
-		str++;
-		while (*str == c)
+		if (*str != c)
 		{
-			str++;
+			cnt++;
+			while (*str != c && *str)
+				 str++;
 		}
-		if (*str == c)
-			i++;
+		else
+			str++;
 	}
-	return (i);
+	return (cnt);
 }
 
 char			**ft_split(char const *str, char c)
@@ -85,11 +86,11 @@ char			**ft_split(char const *str, char c)
 	char	**ret;
 	int		row;
 
-	count_c((char *)str, c);
+	count_word((char *)str, c);
 	if (!str)
 		return (0);
 	row = 0;
-	if (!(ret = (char **)malloc(sizeof(char *) * (count_c((char *)str, c) + 1))))
+	if (!(ret = (char **)malloc(sizeof(char *) * (count_word((char *)str, c) + 1))))
 		return (NULL);
 	if (split_sub(ret, (char *)str, c, row) == 0)
 	{

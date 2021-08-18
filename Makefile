@@ -6,7 +6,7 @@
 #    By: yoyoo <yoyoo@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/05 18:32:37 by yoyoo             #+#    #+#              #
-#    Updated: 2021/05/17 18:31:54 by yoyoo            ###   ########.fr        #
+#    Updated: 2021/05/24 00:54:16 by yoyoo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,8 +73,6 @@ $(NAME): $(OBJS)
 bonus: $(BOBJS) $(OBJS)
 	 $(AR) $(NAME) $^
 
-%.o: %.c $(HEADER)
-	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJS) $(BOBJS)
